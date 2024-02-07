@@ -26,17 +26,20 @@
 // const result = checkName(199);
 // console.log(result);
 
-function deleteInvalids(array){
-    const numbers = [];
-    // for (const element of array) {
-    //     if(typeof element === 'number' && element !== 'NaN'){
-    //         numbers.push(element);
-    //     }
-    //     // console.log(typeof iterator);
-    // }
-    array.includes()
-    console.log(numbers);
-}
+// function deleteInvalids(array){
+//     if(!Array.isArray(array)){
+//         return "Invalid Array";
+//     }
+//     const numbers = [];
+//     for (const element of array) {
+//         if(typeof element === 'number' && !isNaN(element)){
+//             numbers.push(element);
+//         }
+//     }
+//     return numbers;
+// }
 
-deleteInvalids([ NaN, 1,12,0 ,-1 , undefined ]);
+// const result = deleteInvalids({num: [ 1 , 2 , 3 ]});
 // console.log(result);
+
+

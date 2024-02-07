@@ -1,3 +1,4 @@
+// Problem-2:
 function checkName(name) {
     if (typeof name !== "string") {
       return "invalid";

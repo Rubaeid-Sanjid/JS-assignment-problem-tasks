@@ -1,4 +1,4 @@
-// Problem-01:
+// Problem-1:
 function calculateMoney(ticketSale) {
     if(ticketSale<0){
         return "Invalid Number";
