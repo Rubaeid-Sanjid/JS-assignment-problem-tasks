@@ -42,20 +42,50 @@
 // const result = deleteInvalids({num: [ 1 , 2 , 3 ]});
 // console.log(result);
 
-function password(obj){
-    const sizeOfYear = obj.birthYear.toString().length;
+// function password(obj){
+//     const sizeOfYear = obj.birthYear.toString().length;
 
-    if((!Object.hasOwn(obj, 'name')) || (!Object.hasOwn(obj, 'siteName')) || (!Object.hasOwn(obj, 'birthYear')) || (sizeOfYear !== 4)){
-        return "invalid";
+//     if((!Object.hasOwn(obj, 'name')) || (!Object.hasOwn(obj, 'siteName')) || (!Object.hasOwn(obj, 'birthYear')) || (sizeOfYear !== 4)){
+//         return "invalid";
+//     }
+
+//     const capitalizeSiteName = obj.siteName.charAt(0).toUpperCase() + obj.siteName.substring(1);
+
+//     const generatedPassword = capitalizeSiteName + "#" + obj.name + "@" + obj.birthYear;
+//     return generatedPassword;
+// }
+
+// const passwordInfo = { name: "maisha", birthYear: 2002 }  ;
+
+// const result = password(passwordInfo);
+// console.log(result);
+
+function monthlySavings(arr , livingCost){
+
+    if(!Array.isArray(arr) && (typeof livingCost !== 'number')){
+        return "invalid input";
     }
 
-    const capitalizeSiteName = obj.siteName.charAt(0).toUpperCase() + obj.siteName.substring(1);
+    let sum = 0;
 
-    const generatedPassword = capitalizeSiteName + "#" + obj.name + "@" + obj.birthYear;
-    return generatedPassword;
+    for (const payment of arr) {
+        if(payment >= 3000){
+            const tax = 20/100;
+            const amountLeft = payment - (payment*tax);
+            sum += amountLeft;
+        }
+        else{
+            sum = sum + payment; 
+        }
+    }
+    const savings = sum - livingCost;
+    if(savings >= 0){
+        return savings;
+    }
+    else{
+        return "earn more";
+    }
 }
 
-const passwordInfo = { name: "maisha", birthYear: 2002 }  ;
-
-const result = password(passwordInfo);
+const result = monthlySavings(100, [ 900 , 2700 , 3400]);
 console.log(result);
