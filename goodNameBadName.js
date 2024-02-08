@@ -13,5 +13,9 @@ function checkName(name) {
     }
   }
   
-  const result = checkName(199);
-  console.log(result);
+  const result = checkName("Salman");
+  // const result = checkName("RAFEE");
+  // const result = checkName("Jhankar ");
+  // const result = checkName(199);
+  // const result = checkName(["Rashed"] );
+  // console.log(result);

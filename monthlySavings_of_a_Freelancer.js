@@ -1,6 +1,6 @@
 function monthlySavings(arr , livingCost){
 
-    if(!Array.isArray(arr) && (typeof livingCost !== 'number')){
+    if(!Array.isArray(arr) || (typeof livingCost !== 'number')){
         return "invalid input";
     }
 

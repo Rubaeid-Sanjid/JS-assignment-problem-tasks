@@ -12,5 +12,8 @@ function deleteInvalids(array){
     return numbers;
 }
 
-const result = deleteInvalids({num: [ 1 , 2 , 3 ]});
+const result = deleteInvalids([1 , null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }]);
+// const result = deleteInvalids("1" , {num:2} , NaN ]);
+// const result = deleteInvalids([ 1 , 2 , -3 ]);
+// const result = deleteInvalids({num: [ 1 , 2 , 3 ]});
 console.log(result);
